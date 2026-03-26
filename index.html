@@ -2,83 +2,82 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Invitación</title>
+<title>Invitación Isaac y Sofía</title>
 
 <style>
-body {
-  margin: 0;
-  background: #f5f0eb;
-  display: flex;
-  justify-content: center;
-}
+  /* Estilos generales */
+  body {
+    margin: 0;
+    background: #f5f0eb;
+    display: flex;
+    justify-content: center;
+    font-family: 'Georgia', serif;
+  }
 
-.container {
-  position: relative;
-  width: 300px;
-}
+  .container {
+    position: relative;
+    width: 300px; /* Ajusta según tu diseño */
+  }
 
-.container img {
-  width: 100%;
-  border-radius: 15px;
-}
+  /* Imagen de invitación */
+  .container img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    display: block;
+    image-rendering: auto;
+  }
 
-/* CONTADOR */
-#countdown {
-  position: absolute;
-  top: 880px; /* AJUSTA */
-  width: 100%;
-  text-align: center;
-  font-family: 'Georgia', serif;
-  color: #a67c52;
-  font-size: 16px;
-  letter-spacing: 2px;
-}
+  /* Contador */
+  #countdown {
+    position: absolute;
+    top: 880px; /* Ajusta según tu diseño */
+    width: 100%;
+    text-align: center;
+    color: #a67c52;
+    font-size: 16px;
+    letter-spacing: 2px;
+  }
+
+  /* Botones invisibles */
+  .btn-invisible {
+    position: absolute;
+    cursor: pointer;
+    background: rgba(0,0,0,0); /* completamente invisible */
+  }
 </style>
-
 </head>
 <body>
 
 <div class="container">
-  
-  <!-- IMAGEN -->
-  <img src="https://drive.google.com/uc?export=view&id=1e0BRpittmn6yldp8kikn9hxEGfxERbq">
 
-  <!-- CONTADOR -->
+  <!-- Imagen de invitación -->
+  <img src="Invitación Isaac y Sofia.png" alt="Invitación Isaac y Sofía">
+
+  <!-- Contador -->
   <div id="countdown"></div>
 
-  <!-- BOTÓN INVISIBLE UBICACIÓN -->
-  <a href="https://maps.app.goo.gl/FT7mFgKbXzcSF8Wh7" target="_blank"
-     style="
-     position:absolute;
-     top: 1220px; /* AJUSTA */
-     left: 50%;
-     transform: translateX(-50%);
-     width: 140px;
-     height: 40px;
-     ">
-  </a>
-
-  <!-- BOTÓN INVISIBLE PARA MÚSICA (ICONO PLAY) -->
-  <div onclick="document.getElementById('audio').play()"
-       style="
-       position:absolute;
-       top: 1050px; /* AJUSTA */
-       left: 50%;
-       transform: translateX(-50%);
-       width: 80px;
-       height: 80px;
-       cursor: pointer;
-       ">
+  <!-- Botón invisible para música (sobre icono play) -->
+  <div class="btn-invisible"
+       onclick="document.getElementById('audio').play()"
+       style="top:1050px; left:50%; transform:translateX(-50%); width:80px; height:80px;">
   </div>
+
+  <!-- Botón invisible para ubicación (sobre icono ubicación) -->
+  <a href="https://maps.app.goo.gl/FT7mFgKbXzcSF8Wh7" target="_blank"
+     class="btn-invisible"
+     style="top:1220px; left:50%; transform:translateX(-50%); width:140px; height:40px; display:block;">
+  </a>
 
 </div>
 
-<!-- AUDIO -->
+<!-- Reproductor de audio -->
 <audio id="audio">
-  <source src="https://drive.google.com/uc?export=download&id=1YnZBuwtTCctVF8OwrwXvhk_1q3jaQ0yH" type="audio/mpeg">
+  <source src="canción.mp3" type="audio/mpeg">
+  Tu navegador no soporta audio.
 </audio>
 
-<!-- SCRIPT CONTADOR -->
+<!-- Script contador -->
 <script>
 var countDownDate = new Date("Jul 25, 2026 18:30:00").getTime();
 
