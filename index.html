@@ -14,29 +14,32 @@
     font-family: 'Georgia', serif;
   }
 
+  /* Contenedor de la invitación */
   .container {
     position: relative;
-    width: 300px; /* Ajusta según tu diseño */
+    width: 100%;
+    max-width: 1080px; /* ancho máximo de la invitación */
   }
 
   /* Imagen de invitación */
   .container img {
     width: 100%;
     height: auto;
-    border-radius: 15px;
     display: block;
+    border-radius: 15px;
     image-rendering: auto;
   }
 
-  /* Contador */
+  /* Contador responsive */
   #countdown {
     position: absolute;
-    top: 880px; /* Ajusta según tu diseño */
-    width: 100%;
+    top: 35%; /* posición desde arriba en % del contenedor */
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
     color: #a67c52;
-    font-size: 16px;
-    letter-spacing: 2px;
+    font-size: 2vw; /* tamaño de fuente relativo al ancho de la pantalla */
+    letter-spacing: 0.1em;
   }
 
   /* Botones invisibles */
@@ -60,18 +63,18 @@
   <!-- Botón invisible para música (sobre icono play) -->
   <div class="btn-invisible"
        onclick="document.getElementById('audio').play()"
-       style="top:1050px; left:50%; transform:translateX(-50%); width:80px; height:80px;">
+       style="top:42%; left:50%; transform:translateX(-50%); width:7%; height:3%;">
   </div>
 
   <!-- Botón invisible para ubicación (sobre icono ubicación) -->
   <a href="https://maps.app.goo.gl/FT7mFgKbXzcSF8Wh7" target="_blank"
      class="btn-invisible"
-     style="top:1220px; left:50%; transform:translateX(-50%); width:140px; height:40px; display:block;">
+     style="top:48%; left:50%; transform:translateX(-50%); width:12%; height:2.5%; display:block;">
   </a>
 
 </div>
 
-<!-- Reproductor de audio -->
+<!-- Reproductor de audio (necesario aunque sea invisible) -->
 <audio id="audio">
   <source src="canción.mp3" type="audio/mpeg">
   Tu navegador no soporta audio.
