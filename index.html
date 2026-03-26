@@ -5,7 +5,6 @@
 <title>Invitación Isaac y Sofía</title>
 
 <style>
-  /* Estilos generales */
   body {
     margin: 0;
     background: #f5f0eb;
@@ -14,7 +13,7 @@
     font-family: 'Georgia', serif;
   }
 
-  /* Contenedor de la invitación */
+  /* Contenedor principal */
   .container {
     position: relative;
     width: 100%;
@@ -30,23 +29,23 @@
     image-rendering: auto;
   }
 
-  /* Contador responsive */
+  /* Contador sobre la imagen */
   #countdown {
     position: absolute;
-    top: 35%; /* posición desde arriba en % del contenedor */
+    top: 35%;   /* altura proporcional */
     left: 50%;
     transform: translateX(-50%);
-    text-align: center;
     color: #a67c52;
-    font-size: 2vw; /* tamaño de fuente relativo al ancho de la pantalla */
+    font-size: 2vw;  /* relativo al ancho de la pantalla */
     letter-spacing: 0.1em;
+    text-align: center;
   }
 
-  /* Botones invisibles */
+  /* Botones invisibles sobre la imagen */
   .btn-invisible {
     position: absolute;
     cursor: pointer;
-    background: rgba(0,0,0,0); /* completamente invisible */
+    background: rgba(0,0,0,0); /* invisible */
   }
 </style>
 </head>
@@ -74,7 +73,7 @@
 
 </div>
 
-<!-- Reproductor de audio (necesario aunque sea invisible) -->
+<!-- Reproductor de audio -->
 <audio id="audio">
   <source src="canción.mp3" type="audio/mpeg">
   Tu navegador no soporta audio.
